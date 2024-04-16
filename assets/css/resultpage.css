@@ -1,0 +1,67 @@
+.main-header{
+    background-color: cadetblue;
+    align-content: center;
+    box-shadow: 5px 4px 5px 2px rgb(0, 0, 0);
+}
+
+.title{
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+
+}
+
+.movie-poster{
+    width: 93%;
+    height: 400px;
+    display: flex;
+    box-shadow: 5px 4px 5px 2px rgb(0, 0, 0);
+}
+
+.card-image{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.description{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 325px;
+    margin-right: 325px;
+    margin-bottom: 30px;
+}
+
+.movie-title{
+    font-size: 24px;
+}
+
+.small-boxes{
+    background-color: cadetblue;
+    align-content: center;
+    padding: 20px;
+    color: white;
+    box-shadow: 5px 4px 5px 2px rgb(0, 0, 0);
+} 
+
+.home-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.button{
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 5px 4px 5px 2px rgb(0, 0, 0);
+}
