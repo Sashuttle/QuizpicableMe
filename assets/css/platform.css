@@ -1,0 +1,19 @@
+/* Note: Platform Question */
+.platformQ {
+    font-size: 90px;
+}
+
+/* Platform Buttons */
+.platBtns {
+    display: flex;
+    justify-content: center;
+}
+
+.platBtns img{
+    display: inline-block;
+    margin-top: 200px;
+}
+
+.netflixBtn {
+    margin-right: 150px;
+}
