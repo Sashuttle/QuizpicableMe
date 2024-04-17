@@ -3,30 +3,36 @@
 const netflix = document.getElementsByClassName('netflixBtn')[0];
 const hulu = document.getElementsByClassName('huluBtn')[0];
 
-let platform;
 
 //Note: click event handler for platform buttons
-netflix.addEventListener('click' , function (){
-    choosePlatform('netflix');
-    console.log('netflix')
+netflix.addEventListener('click' , async function (){
+    await choosePlatform('netflix');
+    redirect();
 });
 
-hulu.addEventListener('click', function(){
-    choosePlatform('hulu');
-    console.log('hulu');
+hulu.addEventListener('click', async function(){
+    await choosePlatform('hulu');
+    redirect();
 });
-//FixMe: we need an click event listener for hulu and netflix btns when they are clicked on they should run choose platform function if they clicked hulu the platform value should be hulu.subcription if they pick netflix it should be netflix.subscription
-// Note: Functions
-function choosePlatform(platformArg) {
-    localStorage.setItem('selectedPlatform' , platformArg);
-    platform = platformArg;
+
+function redirect(){
+    setTimeout(() => {
+        window.location.href = "./index.html"
+    }, 2000);
 }
 
-function search(platform, genre) {
+// Note: Functions
+async function choosePlatform(platformArg) {
+    localStorage.setItem('selectedPlatform' , platformArg);
+    const response = await search(platformArg);
+    return response;
+};
+
+function search(platform) {
     const settings = {
         async: true,
         crossDomain: true,
-        url: `https://streaming-availability.p.rapidapi.com/search/filters?services=${platform}&country=us&keyword=${genre}&output_language=en&order_by=original_title&genres_relation=and&show_type=all`,
+        url: `https://streaming-availability.p.rapidapi.com/search/filters?services=${platform}&country=us&output_language=en&order_by=original_title&genres_relation=and&show_type=all`,
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': '67c9f19b02mshc8881142d24b696p1177acjsnfa51979c1728',
@@ -35,9 +41,6 @@ function search(platform, genre) {
     };
     
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        localStorage.setItem('APIResponse' , JSON.stringify(response));
     }); 
 };
-// Uncomment here to test API search('netflix' , 'house of cards')
-
-//FixMe: 
