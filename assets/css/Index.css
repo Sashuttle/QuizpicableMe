@@ -1,8 +1,17 @@
+h1 {
+ color: #f5bd06; 
+    
+}
+
 body {
     background-color: #1014ee;
     background-image: url('./assets/hulu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+li {
+    color: rgb(245, 189, 6);
+    font-style: normal;
 }
 
 label {
@@ -14,7 +23,7 @@ p {
     color: rgb(248, 247, 245);
     font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;
 }
-button {
+a {
     background-color: #f5bd06;
     color: #ffffff;
     font-family: Arial, sans-serif;
@@ -28,6 +37,9 @@ button {
 }
 
 
-button:hover {
-    background-color: #e6a305;
+a:hover {
+    background-color: #f5f4ee;
+    font-style: normal;
+    color: black;
+    
 }
