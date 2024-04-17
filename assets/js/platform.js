@@ -3,20 +3,23 @@
 const netflix = document.getElementsByClassName('netflixBtn')[0];
 const hulu = document.getElementsByClassName('huluBtn')[0];
 
+
 //Note: click event handler for platform buttons
 netflix.addEventListener('click' , async function (){
     await choosePlatform('netflix');
-    setTimeout(() => {
-        window.location.href = "./index.html"
-    }, 2000);
+    redirect();
 });
 
 hulu.addEventListener('click', async function(){
     await choosePlatform('hulu');
+    redirect();
+});
+
+function redirect(){
     setTimeout(() => {
         window.location.href = "./index.html"
     }, 2000);
-});
+}
 
 // Note: Functions
 async function choosePlatform(platformArg) {
