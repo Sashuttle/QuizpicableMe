@@ -1,32 +1,46 @@
 <!--Note: Platform Selection Page HTML-->
 <!DOCTYPE html>
 <html lang="en">
-
-<!--Note: Coding addons we are using-->
-<head>
-    <meta charset="UTF-8">
+  <!--Note: Coding addons we are using-->
+  <head>
+    <meta charset="UTF-8" />
     <title>Quizpicable Me</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/platform.css">
-</head>
+    <link rel="stylesheet" href="./assets/css/platform.css" />
+  </head>
 
-<body class="body">
+  <body class="body">
     <!--Note: Question for platform-->
     <header>
-        <h1 class="platformQ text-center">What streaming platform do you use?</h1>
+      <h1 class="platformQ text-center">What streaming platform do you use?</h1>
     </header>
 
     <!--Note: Netflix Button (will lead to Netflix Questions)-->
     <!--ToDo: Have description of buttons appear when hovering over buttons.  Possible red and green glow when hovering over them?-->
     <section class="platBtns">
-        <a href="./index.html">
-            <img src="./images/netflixbtn.jpg" class="netflixBtn w-96 h-80" id="clickableImage" alt="Netflix Logo, click to go to Netflix Questions">
-        </a>
-    <!--Note: Hulu Button (will lead to Hulu Questions index.html)-->
-        <a href="./index.html">
-            <img src="./images/hulubtn.jpg" class="huluBtn w-96 h-80" id="clickableImage" alt="Hulu Logo, click to go to Hulu Questions">
-        </a>
+      <a href="./index.html">
+        <img
+          src="./images/netflixbtn.jpg"
+          class="netflixBtn w-96 h-80"
+          id="clickableImage"
+          alt="Netflix Logo, click to go to Netflix Questions"
+        />
+      </a>
+      <!--Note: Hulu Button (will lead to Hulu Questions index.html)-->
+      <a href="./index.html">
+        <img
+          src="./images/hulubtn.jpg"
+          class="huluBtn w-96 h-80"
+          id="clickableImage"
+          alt="Hulu Logo, click to go to Hulu Questions"
+        />
+      </a>
     </section>
-    
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/platform.js"></script>
+  </body>
 </html>
