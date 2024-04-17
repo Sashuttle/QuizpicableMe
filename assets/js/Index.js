@@ -57,3 +57,7 @@ const parsedData = JSON.parse(storedData);
 
 // Use the retrieved data
 console.log(parsedData);
+
+// API call from platform page
+const platformResponse = JSON.parse(localStorage.getItem('APIResponse'));
+console.log(platformResponse);
