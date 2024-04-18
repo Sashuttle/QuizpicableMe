@@ -4,7 +4,7 @@
 
 
 // Function to filter movies based on genre and sub-genre
-function filterMovies(genre, subGenre) {
+function filterMovies(genre) {
     const platformResponse = JSON.parse(localStorage.getItem('APIResponse'));
     const filteredMovies = platformResponse.result.filter(movie => {
         if (movie.genres.some(element =>{return element.name.toLowerCase()=== genre.toLowerCase()})) {
@@ -28,28 +28,3 @@ document.querySelectorAll('.genreOption').forEach(option => {
 
 const filteredMovies = filterMovies('comedy', 'romantic comedy');
 console.log(filteredMovies);
-
-/*const platformResponse = [
-    { genre: 'comedy', subGenre: 'romanticComedy', title: 'Movie 1' },
-    { genre: 'action', subGenre: 'thriller', title: 'Movie 2' },
-    { genre: 'drama', subGenre: 'romanticDrama', title: 'Movie 3' }
-  ];
-  console.log(platformResponse);
-  // Define the genre you want to filter by genre and subgenre
-  function filterMovies(genre, subGenre) {
-      return platformResponse.filter(item => {
-          return item.genre === genre && item.subGenre === subGenre;
-      });
-  }
-  // Example of filtering by 'comedy' and subgenre 'romantic comedy'
-  document.getElementById("comedy").addEventListener("click", function() {
-      const selectedMovies = filterMovies('comedy', 'romanticComedy');
-      const filteredMovies = selectedMovies.map(item => {
-          return item.title;
-      });
-      console.log(filteredMovies);
-  });
-  const selectedMovies = filterMovies('comedy', 'romanticComedy');
-  const filteredMovies = selectedMovies.map(item => {
-      return item.title;
-  });*/
