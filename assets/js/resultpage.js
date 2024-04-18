@@ -1,3 +1,6 @@
+const platformResponse = JSON.parse(localStorage.getItem('APIResponse'));
+const filteredResponse = JSON.parse(localStorage.getItem('FilteredMovies'));
+
 const apiKey = '81d6a7bdbdmsh2af2cb87ce7440dp1ea28fjsn2ec66bea64a5'
 const apiMovieDatabase = 'https://moviedatabase8.p.rapidapi.com/FindByImbdId/tt1375666';
 const apiMovieDatabaseResults = 'https://moviedatabase8.p.rapidapi.com/Filter?Limit=30&MinRating=5.1&MaxRating=9.9&MinYear=1980&MaxYear=2023&MinRevenue=1000000&MaxRevenue=300000000&Genre=Action%20Comedy%20History%20Horror&MinRuntime=60&MaxRuntime=180&OriginalLanguage=en&SpokenLanguage=English';
