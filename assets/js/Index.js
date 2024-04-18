@@ -11,7 +11,8 @@ function filterMovies(genre) {
             return movie
         };
     });
-    console.log(`Filtered movies for genre '${genre}':`, filteredMovies); 
+    console.log(`Filtered movies for genre '${genre}':`, filteredMovies);
+    localStorage.setItem('FilteredMovies' , JSON.stringify(filteredMovies)); 
     return filteredMovies;
 }
 
@@ -24,7 +25,6 @@ document.querySelectorAll('.genreOption').forEach(option => {
         localStorage.setItem('FilteredMovies', JSON.stringify(filteredMovies));
     });
 });
-
 
 const filteredMovies = filterMovies('comedy', 'romantic comedy');
 console.log(filteredMovies);
