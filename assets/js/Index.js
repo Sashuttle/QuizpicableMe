@@ -1,4 +1,5 @@
-import axios from 'axios';
+
+/*import axios from 'axios';
 
 const options = {
     method: 'GET',
@@ -61,3 +62,4 @@ console.log(parsedData);
 // API call from platform page
 const platformResponse = JSON.parse(localStorage.getItem('APIResponse'));
 console.log(platformResponse);
+*/
